@@ -47,6 +47,8 @@ docker run \
 gcp-key-rotation
 ```
 
+Note. One part of the script tries to connect to GCP Project ID and requires GOOGLE_APPLICATION_CREDENTIALS environment variable. If you run it from within a GCP Cloud Run/Cloud Function it will automatically authenticate as the service account associated with that entity.
+
 ## Environment variables
 **Put this into your .env file**
 1. GCP_PROJECTID="\<GCP Project\>"
