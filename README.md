@@ -32,6 +32,20 @@ python main.py
 POST http://127.0.0.1:8080/rotate
 ```
 
+# Docker
+#### Build
+```
+docker build -t gcp-key-rotation .
+```
+#### Run
+```
+docker run \
+-v -v /path/to/keys:/tmp/keys:ro \
+-e GCP_PROJECTID=<GCP Project> \
+-e GOOGLE_APPLICATION_CREDENTIALS=/tmp/keys/<key>.json \
+-p 8080:8080 \
+gcp-key-rotation
+```
 
 ## Environment variables
 **Put this into your .env file**
