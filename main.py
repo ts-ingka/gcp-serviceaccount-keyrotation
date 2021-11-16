@@ -42,9 +42,7 @@ def create_gcp_key(sa):
 @app.route("/rotate", methods=["POST"])
 def rotate():
     try:
-        accountfile = getenv("ACCOUNTFILE_PATH")
-
-        with open(accountfile, "r") as f:
+        with open(getenv("ACCOUNTFILE_PATH"), "r") as f:
             accounts = json.loads(f.read())
 
         for account in accounts["accounts"]:
