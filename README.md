@@ -23,10 +23,15 @@ touch .env
 ```
 Update *keys.json* file with your service accounts or modify the script to for instance connect to Firestore.
 
-**Run script**
+**Run script (will start flask Rest API)**
 ```
 python main.py
 ```
+**Run rotation**
+```
+POST http://127.0.0.1:8080/rotate
+```
+
 
 ## Environment variables
 **Put this into your .env file**
